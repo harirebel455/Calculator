@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<link rel="stylesheet"href="mdb/css/bootstrap.css">
+	<link rel="stylesheet"href="mdb/css/mdb.css">
+</head>
+<body>
+       <div class="container mt-5">
+       	<div class="row">
+       		<div class="col-md-8">
+       			<div class="card">
+       				<div class="card-header text-center bg-secondary">
+       				   <h3 class="card-title">JS Calculator</h3>
+       				</div>
+       				 <div class="card-body bg-light">
+       					 <div class="row">
+       						<div class="col-md-8">
+       							<form name="myform">
+       							<input type="text" placeholder="Enter 1st number" 
+       						id="n1">
+       						</form>
+       						</div>
+       					</div>
+       					<div class="row">
+       						<div class="col-md-8 mt-2">
+       							<form name="myform">
+       							<input type="text" placeholder="Enter 2nd number" id="n2">
+       						</form>
+       						</div>
+       					</div>
+       					<div class="row">
+       						<div class="col-md-3">
+       							<a href="#" class="btn btn-success" id="sum-btn">SUM</a>
+       						</div>
+       						<div class="col-md-3">
+       							<a href="#" class="btn btn-danger" id="sub-btn">SUB</a>
+       						</div>
+       						<div class="col-md-3">
+       							<a href="#" class="btn btn-success" id="mul-btn">MUL</a>
+       						</div>
+       						<div class="col-md-3">
+       							<a href="#" class="btn btn-primary" id="div-btn">DIv</a>
+       						</div>
+       					</div>
+       				</div>
+       				<div class="card-footer bg-secondary text-white text-center">
+						<h2>Result:<span id="hari">0</span></h2>
+					</div>
+       			</div>
+       		</div>
+       	</div>
+       </div>
+       <script>
+              let a;
+              let b;
+let input1=document.querySelector('#n1');
+input1.addEventListener('keyup',function()
+{
+       var a1=input1.value;
+       a=parseInt(a1);
+       
+})
+
+let input2=document.querySelector('#n2');
+input2.addEventListener('keyup',function()
+{
+       var b1=input2.value;
+       b=parseInt(b1);
+       
+})
+
+var result=0;
+
+
+var sumBtn=document.querySelector('#sum-btn');
+sumBtn.addEventListener('click',function()
+{
+   sum=a+b;
+       document.querySelector('#hari').innerText=sum;
+})
+
+
+var subBtn=document.querySelector('#sub-btn');
+subBtn.addEventListener('click',function()
+{
+        sub=a-b;
+       document.querySelector('#hari').innerText=sub;
+})
+
+var mulBtn=document.querySelector('#mul-btn');
+mulBtn.addEventListener('click',function()
+{
+        mul=a*b;
+       document.querySelector('#hari').innerText=mul;
+
+})
+
+var divBtn=document.querySelector('#div-btn');
+divBtn.addEventListener('click',function()
+{
+         div=a/b;
+       document.querySelector('#hari').innerText=div;
+})
+
+       </script>
+</body>
+</html>
